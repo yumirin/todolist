@@ -1,0 +1,123 @@
+body {
+    background-image: url(img/spice.png);
+}
+
+h2 {
+    margin-top: 80px;
+    font-size: 50px;
+    color:aliceblue;
+    text-align: center;
+}
+.checkbox{
+    text-align: center;
+}
+.checkbox1{
+  text-align: left;
+}
+.checkbox2{
+  text-align: left;
+}
+.checkbox3{
+  text-align: left;
+}
+.checkbox4{
+  text-align: left;
+}
+.checkbox5{
+  text-align: left;
+}
+.checkbox6{
+  text-align: left;
+}
+.checkbox7{
+  text-align: left;
+}
+input[type=checkbox] {
+  transform: scale(3);
+  vertical-align: middle;
+}
+input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 30px;
+    color: bisque;
+    cursor: pointer;
+  }
+  
+  label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    border: solid 2px #ccc;
+    border-radius: 3px;
+    transition: all ease-in-out 0.125s;
+  }
+  
+  label:after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    transform: rotate(-45deg) scaleX(0);
+    transform-origin: left;
+    width: 12px;
+    height: 5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: transform 0.125s ease-in-out;
+  }
+  
+  input:checked + label:before {
+    background-color: #074DBF;
+    border-color: #074DBF;
+  }
+  
+  input:checked + label:after {
+    transform: rotate(-45deg) scaleX(1);
+  }
+  body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left:200px;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+  }
+  
+  div {
+    margin: 5px 0;
+  }
+  /** チェックOFFなら非表示 */
+.message{ 
+  display: none;
+}
+/** チェックONなら表示 */
+input:checked ~ .message{
+  display: block;
+}
+
+/** チェックボックス横にラベル表示 */
+[type="checkbox"].toggle{
+  position: relative;
+}
+[type="checkbox"].toggle:after{
+  content: "表示する";
+  position: absolute;
+  width: 100px; height: 20px;
+  padding-left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
